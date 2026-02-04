@@ -19,7 +19,7 @@ jobs:
         run: flutter pub get
 
       - name: Build APK
-        run: flutter build apk --flavor dev -t ./lib/main_prod.dart --release
+        run: flutter build apk --flavor prod -t ./lib/main_prod.dart --release
 
       - name: Check APK location
         run: ls -R build/app/outputs/flutter-apk/
