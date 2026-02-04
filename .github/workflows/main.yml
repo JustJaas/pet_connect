@@ -23,7 +23,7 @@ jobs:
 
       - name: Upload APK to Diawi
         run: |
-          curl -F "file=@build/app/outputs/flutter-apk/app-release.apk" \
+          curl -F "file=@build/app/outputs/flutter-apk/app-prod-release.apk" \
                -F "token=${{ secrets.DIAWI_TOKEN }}" \
                https://upload.diawi.com/
       
