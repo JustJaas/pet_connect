@@ -31,4 +31,4 @@ jobs:
         run: |
           curl -X POST https://api.testapp.io/v1/apps/${{ secrets.TESTAPP_APP_ID }}/releases \
           -H "Authorization: Bearer ${{ secrets.TESTAPP_API_KEY }}" \
-          -F "file=@build/app/outputs/flutter-apk/app-release.apk"
+          -F "file=@build/app/outputs/flutter-apk/app-prod-release.apk"
