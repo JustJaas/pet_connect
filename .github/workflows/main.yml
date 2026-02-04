@@ -36,8 +36,7 @@ jobs:
           api_token: ${{ secrets.TESTAPP_API_KEY }}
           app_id: ${{ secrets.TESTAPP_APP_ID }}
           file: build/app/outputs/flutter-apk/app-prod-release.apk
-          release_notes: "Nueva versión desde GitHub Actions"
-          
+
       - name: Upload APK to TestApp.io
         run: |
           curl -X POST https://api.testapp.io/v1/apps/${{ secrets.TESTAPP_APP_ID }}/releases \
