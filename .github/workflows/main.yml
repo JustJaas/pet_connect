@@ -36,6 +36,7 @@ jobs:
           api_token: ${{ secrets.TESTAPP_API_KEY }}
           app_id: ${{ secrets.TESTAPP_APP_ID }}
           file: build/app/outputs/flutter-apk/app-prod-release.apk
+          notify: true
 
       - name: Upload APK to TestApp.io
         run: |
