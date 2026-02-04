@@ -19,7 +19,7 @@ jobs:
         run: flutter pub get
 
       - name: Build APK
-        run: flutter build apk --release
+        run: flutter build apk --release -t lib/main_prod.dart
 
       - name: Upload APK to Diawi
         run: |
