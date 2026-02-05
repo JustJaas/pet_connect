@@ -38,8 +38,3 @@ jobs:
           file: build/app/outputs/flutter-apk/app-prod-release.apk
           notify: true
 
-      - name: Upload APK to TestApp.io
-        run: |
-          curl -X POST https://api.testapp.io/v1/apps/${{ secrets.TESTAPP_APP_ID }}/releases \
-          -H "Authorization: Bearer ${{ secrets.TESTAPP_API_KEY }}" \
-          -F "file=@build/app/outputs/flutter-apk/app-prod-release.apk"
